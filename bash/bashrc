@@ -1,0 +1,13 @@
+# Oh My Posh
+if command -v oh-my-posh >/dev/null 2>&1; then
+  HOST=$(hostname)
+
+  if [[ "$HOST" =~ ^(srv|prod|vm) ]]; then
+    CONFIG="server.omp.json"
+  else
+    CONFIG="desktop.omp.json"
+  fi
+
+  eval "$(oh-my-posh init bash \
+    --config ~/oh-my-posh/oh-my-posh/$CONFIG)"
+fi

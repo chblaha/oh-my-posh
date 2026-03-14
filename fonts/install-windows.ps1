@@ -1,4 +1,4 @@
-$FontName = "CaskaydiaCove Nerd Font"
+#$FontName = "CaskaydiaCove Nerd Font"
 
 if (Get-ChildItem "$env:WINDIR\Fonts" | Where-Object { $_.Name -like "*Caskaydia*" }) {
     Write-Host "Font bereits installiert"
